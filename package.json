@@ -23,5 +23,9 @@
   "dependencies": {
     "coffee-script": ">=1.1.1",
     "xmlrpc": ">=0.8.1"
+  },
+  "devDependencies" : {
+    "underscore" : ">=1.2.1",
+    "jasmine-node": ">=1.0.12"
   }
 }
