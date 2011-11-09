@@ -14,7 +14,7 @@
   "directories" : {
     "lib" : "./lib/pypi"
   },
-  "main" : ".index",
+  "main" : "./index",
   "homepage":     "https://github.com/lukaszb/pypi",
   "repository":   {
     "type": "git",
