@@ -16,29 +16,29 @@ class Client
             else if callback
                 callback(value)
 
-    getPackageReleases: (package, callback, onError, showHidden=false) ->
-        @callXmlrpc "package_releases", [package, showHidden], callback, onError
+    getPackageReleases: (pkg, callback, onError, showHidden=false) ->
+        @callXmlrpc "package_releases", [pkg, showHidden], callback, onError
 
     getPackagesList: (callback, onError) ->
         @callXmlrpc "list_packages", [], callback, onError
 
-    getPackageRoles: (package, callback, onError) ->
-        @callXmlrpc "package_roles", [package], callback, onError
+    getPackageRoles: (pkg, callback, onError) ->
+        @callXmlrpc "package_roles", [pkg], callback, onError
 
-    getUserPackages: (package, callback, onError) ->
-        @callXmlrpc "user_packages", [package], callback, onError
+    getUserPackages: (pkg, callback, onError) ->
+        @callXmlrpc "user_packages", [pkg], callback, onError
 
-    getReleaseData: (package, version, callback, onError) ->
-        @callXmlrpc "release_data", [package, version], callback, onError
+    getReleaseData: (pkg, version, callback, onError) ->
+        @callXmlrpc "release_data", [pkg, version], callback, onError
 
-    getReleaseDownloads: (package, version, callback, onError) ->
-        @callXmlrpc "release_downloads", [package, version], callback, onError
+    getReleaseDownloads: (pkg, version, callback, onError) ->
+        @callXmlrpc "release_downloads", [pkg, version], callback, onError
 
-    getReleaseUrls: (package, version, callback, onError) ->
-        @callXmlrpc "release_urls", [package, version], callback, onError
+    getReleaseUrls: (pkg, version, callback, onError) ->
+        @callXmlrpc "release_urls", [pkg, version], callback, onError
 
-    search: (package, callback, onError) ->
-        @callXmlrpc "search", [{name: package}], callback, onError
+    search: (pkg, callback, onError) ->
+        @callXmlrpc "search", [{name: pkg}], callback, onError
 
 
 module.exports = Client
