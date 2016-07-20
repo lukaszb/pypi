@@ -1,13 +1,13 @@
 xmlrpc = require 'xmlrpc'
 
-DEFAULT_URL = 'http://pypi.python.org/pypi'
+DEFAULT_URL = 'https://pypi.python.org/pypi'
 
 
 class Client
 
     constructor: (url=DEFAULT_URL) ->
         @url = url
-        @xmlrpcClient = xmlrpc.createClient @url
+        @xmlrpcClient = xmlrpc.createSecureClient @url
 
     callXmlrpc: (method, args, callback, onError) ->
         @xmlrpcClient.methodCall method, args, (error, value) ->
